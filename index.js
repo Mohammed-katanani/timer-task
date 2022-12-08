@@ -56,7 +56,7 @@ statMoodWatch="start";
         }
     })
 //when click on the start btn
-let counter;
+let counter,fullTime;
     startStop.addEventListener("click",()=>{
         reset.style.opacity="1"
         if(mood=="timer"){
@@ -117,10 +117,11 @@ let counter;
     })
     //reset
     reset.addEventListener('click',()=>{
-        startStop.dataset.type="start"
-        startStop.innerHTML="start"
-        statMoodWatch="start"
+        
         if(mood=="timer"){
+            statMoodTimer="start"
+            startStop.dataset.type=statMoodTimer
+            startStop.innerHTML=statMoodTimer
                 clearInterval(counter)
                 spans[5].innerHTML="0"
                 spans[4].innerHTML="0"
@@ -130,6 +131,10 @@ let counter;
                 spans[0].innerHTML="0"
                 reset.style.opacity="0.3"
         }else{
+            statMoodWatch="start"
+            startStop.dataset.type=statMoodTimer
+        startStop.innerHTML=statMoodTimer
+            
             clearInterval(stopWatchTime);
         tens = "00";
         seconds = "00";
