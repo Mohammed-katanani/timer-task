@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-transform: uppercase;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -103,7 +104,19 @@ main .progres{
     margin:0 20px;
 }
 /* input */
+.timerInput::-webkit-outer-spin-button,
+.timerInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.timerInput::marker{
+    color: transparent;
+    background-color: transparent;
+    user-select: none;
+} 
+.timerInput::selection{ color:transparent }
 .timerInput{ 
+    user-select: none;
     background-color: transparent;
     border: none;
     outline: none;
