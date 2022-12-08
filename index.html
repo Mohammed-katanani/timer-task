@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>timer task</h1></header>
+    <main>
+        <div class="container">
+            <header>
+                <button class="active" id="timerBtn">⏳ timer</button>
+                <button id="stopwatch">⏱ stopwatch</button>
+            </header>
+            <main>
+                <div class="timer">
+                    <div class="spanContainer">
+                        <span>0</span>
+                        <span>0</span>
+                        <span class="char">h</span>
+                        <span>0</span>
+                        <span>5</span>
+                        <span class="char">m</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span class="char">s</span>
+                    </div>
+                    <input class="timerInput" type="number" name="timer"value="500" id="timerInput">
+                </div>
+                <div class="stopwatch">
+                    <!-- <span class="hour" data-date="h">00</span>
+                    <span class="minute" data-date="m">00</span>
+                    <span class="second"data-date="s">00</span>
+                    <span>00</span> -->
+                    <p id="time"><span id="second">00</span>:<span id="tens">00</span></p>
+                </div>
+                <span class="progres"></span>
+            </main>
+            <footer>
+                <div class="btns">
+                    <button id="start" data-type="start">start</button>
+                    <button id="reset">reset</button>
+                </div>
+                <div class="icons">
+                    <span class="sound">🔊</span>
+                    <span class="fullScreen">🔳</span>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
